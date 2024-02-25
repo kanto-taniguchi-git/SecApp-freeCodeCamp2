@@ -20,13 +20,13 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 });
 //END_ASYNC
 
-//START_SYNC
-
-
-
+//START_SYNC(同期処理)
+// 基本的に非同期で処理する
+const hash = bcrypt.hashSync(someOtherPlaintextPassword, saltRounds);
+console.log(hash);
+const result = bcrypt.compareSync(someOtherPlaintextPassword, hash);
+console.log(result);
 //END_SYNC
-
-
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
