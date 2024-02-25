@@ -22,9 +22,9 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 
 //START_SYNC(同期処理)
 // 基本的に非同期で処理する
-const hash = bcrypt.hashSync(someOtherPlaintextPassword, saltRounds);
+const hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
 console.log(hash);
-const result = bcrypt.compareSync(someOtherPlaintextPassword, hash);
+const result = bcrypt.compareSync(myPlaintextPassword, hash);
 console.log(result);
 //END_SYNC
 
