@@ -14,7 +14,7 @@ const someOtherPlaintextPassword = 'pass123';
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(hash);
     // 新しい入力がハッシュと一致するかどうかを確認する
-    bcrypt.compare(someOtherPlaintextPassword, hash, (err, res) => {  // 第一引数はハッシュ化されていないデータ
+    bcrypt.compare(myPlaintextPassword, hash, (err, res) => {  // 第一引数はハッシュ化されていないデータ
         console.log(res);
     });
 });
