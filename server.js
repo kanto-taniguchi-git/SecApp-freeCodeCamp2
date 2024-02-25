@@ -2,6 +2,7 @@
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const fccTesting  = require('./freeCodeCamp/fcctesting.js');
+const bcrypt      = require('bcrypt');
 const app         = express();
 fccTesting(app);
 const saltRounds = 12;
@@ -23,33 +24,7 @@ const someOtherPlaintextPassword = 'pass123';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log("Listening on port:", PORT)
+    console.log("👹TEST APP!! ", PORT)
 });
